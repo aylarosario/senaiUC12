@@ -1,0 +1,15 @@
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\bin\Debug\net6.0\Sistema.exe
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\bin\Debug\net6.0\Sistema.deps.json
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\bin\Debug\net6.0\Sistema.runtimeconfig.json
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\bin\Debug\net6.0\Sistema.dll
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\bin\Debug\net6.0\Sistema.pdb
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\obj\Debug\net6.0\Sistema.csproj.AssemblyReference.cache
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\obj\Debug\net6.0\Sistema.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\obj\Debug\net6.0\Sistema.AssemblyInfoInputs.cache
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\obj\Debug\net6.0\Sistema.AssemblyInfo.cs
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\obj\Debug\net6.0\Sistema.csproj.CoreCompileInputs.cache
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\obj\Debug\net6.0\Sistema.dll
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\obj\Debug\net6.0\refint\Sistema.dll
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\obj\Debug\net6.0\Sistema.pdb
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\obj\Debug\net6.0\Sistema.genruntimeconfig.cache
+C:\Users\aylar\OneDrive\Documentos\GitHub\senaiUC12\SA2\Sistema\obj\Debug\net6.0\ref\Sistema.dll
