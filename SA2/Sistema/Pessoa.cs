@@ -9,10 +9,10 @@ namespace Sistema
     {
         public string nome {get; set;}
 
-        public string endereco { get; set; }
+        public Endereco? endereco { get; set; }
 
         public bool enderecoComercial { get; set; }
 
-        public void PagarImposto(){}
+        public abstract void PagarImposto(float rendimento);
     }
 }
