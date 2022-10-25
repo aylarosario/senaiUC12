@@ -2,47 +2,60 @@
 public class program{
 static void Main(string[] args)
 {
-/*
-    Endereco end = new Endereco();
-    end.logradouro = "Rua x";
-    end.numero = 100; 
-    end.complemento = "Qualquer coisa";
-    end.enderecoComercial = false;
+    Console.ForegroundColor = ConsoleColor.DarkCyan;
+    Console.WriteLine(@$"
+    ===============================================
+    !                                             !
+    !        Seja Bem Vindo ao nosso Sistema      !
+    !        de Cadastro de Pessoa Física e       !
+    !        Juridica                             !
+    !                                             !
+    ===============================================
+    ");
+    Console.ResetColor();
 
-    PessoaFisica pf = new PessoaFisica();
-    pf.endereco = end;
-    pf.nome = "Ayla Rosario";
-    pf.CPF = "0335978600";
-    pf.dataNascimento = new DateTime(1998, 09, 24);
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.Write("iniciando ");
+    Thread.Sleep(500);
+    Console.Write("#");
 
-
-    bool idadeValida = pf.ValidarDataNascimento(pf.dataNascimento);
-    Console.WriteLine(idadeValida);
-
-    if(idadeValida == true){
-        System.Console.WriteLine("Cadastro Aprovado");
-    }else{
-        Console.WriteLine("Cadastro Reprovado");
+    for(var contador = 0; contador < 10; contador++){
+        Console.Write("#");
+        Thread.Sleep(500);
     }
-    */
+    Console.ResetColor();
 
+    string opcao;
+    do{
+    Console.ForegroundColor = ConsoleColor.DarkBlue;
+    Console.WriteLine(@$"
+    ===============================================
+    !        Escolha uma das opções abaixo        !
+    ===============================================
+    !                                             !
+    !           1 - Pessoa Física                 !
+    !           2 - Pessoa Jurídica               !
+    !                                             !
+    !           0 - Sair                          !
+    !                                             !
+    ===============================================
+    ");
+    opcao = Console.ReadLine();
 
-    PessoaJuridica pj = new PessoaJuridica();
-    Endereco end = new Endereco();
-    end.logradouro = "Rua x";
-    end.numero = 100; 
-    end.complemento = "Qualquer coisa";
-    end.enderecoComercial = true;
-
-    pj.endereco = end;
-    pj.CNPJ = "12345678990001";
-    pj.razaoSocial = "Pessoa Juridica";
-
-    if(pj.validarCNPJ(pj.cnpj)){
-        Console.WriteLine("cnpj valido");
-    }else{
-        Console.WriteLine("cnpj invalido");
+    switch(opcao){
+        case "1":
+        break;
+        case "2":
+        break;
+        case "0":
+        break;
+        default:
+        Console.WriteLine("Opção inválida, por favor digite uma das opções apresentadas");
+        break;
     }
+    }while(opcao != "0");
+
+    Console.ResetColor();
 }
 }
 }
