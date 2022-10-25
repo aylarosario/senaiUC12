@@ -2,9 +2,10 @@
 public class program{
 static void Main(string[] args)
 {
+/*
     Endereco end = new Endereco();
     end.logradouro = "Rua x";
-    end.numero = 100;
+    end.numero = 100; 
     end.complemento = "Qualquer coisa";
     end.enderecoComercial = false;
 
@@ -22,6 +23,25 @@ static void Main(string[] args)
         System.Console.WriteLine("Cadastro Aprovado");
     }else{
         Console.WriteLine("Cadastro Reprovado");
+    }
+    */
+
+
+    PessoaJuridica pj = new PessoaJuridica();
+    Endereco end = new Endereco();
+    end.logradouro = "Rua x";
+    end.numero = 100; 
+    end.complemento = "Qualquer coisa";
+    end.enderecoComercial = true;
+
+    pj.endereco = end;
+    pj.CNPJ = "12345678990001";
+    pj.razaoSocial = "Pessoa Juridica";
+
+    if(pj.validarCNPJ(pj.cnpj)){
+        Console.WriteLine("cnpj valido");
+    }else{
+        Console.WriteLine("cnpj invalido");
     }
 }
 }
