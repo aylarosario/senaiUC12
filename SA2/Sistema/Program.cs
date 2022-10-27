@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-            PessoaJuridica metodoPj = new PessoaJuridica();
             PessoaJuridica novaPj = new PessoaJuridica();
             Endereco novoEndPj = new Endereco();
 
@@ -188,25 +187,26 @@
 
                         novaPj.endereco = novoEndPj;
 
-                        metodoPj.Inserir(novaPj);
+                        novaPj.Inserir(novaPj);
 
                         break;
 
                     case "5":
                     //Listar pessoa juridica
-                        List<PessoaJuridica> listaPj = metodoPj.Ler();
+                        List<PessoaJuridica> listaPj = novaPj.Ler();
                         foreach(PessoaJuridica cadaItem in listaPj){
                             Console.Clear();
                             Console.WriteLine(@$"
-                            Nome: {novaPj.nome}
-                            Razão Social: {novaPj.razaoSocial}
-                            CNPJ: {novaPj.CNPJ}");
+                            Nome: {cadaItem.nome}
+                            Razão Social: {cadaItem.razaoSocial}
+                            CNPJ: {cadaItem.CNPJ}");
                         }
 
                         break;
 
                     case "6":
                     //Remover pessoa jurídica
+
                         break;
 
                     case "0":
