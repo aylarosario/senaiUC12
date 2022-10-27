@@ -64,9 +64,11 @@ static void Main(string[] args)
                     Ayla.dataNascimento = new DateTime(1998, 09, 24);
                     Ayla.endereco = endPf;
                     Ayla.nome = "Ayla Rayane dos Santos do Rosário";
+                    float impostoapagar = Ayla.PagarImposto(5000);
 
                     Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Console.WriteLine(@$"Nome: {Ayla.nome}
+                    Console.WriteLine(@$"Imposto a pagar: {impostoapagar}
+Nome: {Ayla.nome}
 CPF: {Ayla.CPF}
 Nascido em {Ayla.dataNascimento.ToString("dd/MM/yyyy")}
 {endPf.logradouro}, {endPf.numero}");
@@ -86,7 +88,9 @@ Nascido em {Ayla.dataNascimento.ToString("dd/MM/yyyy")}
                     pj.endereco = endPj;
                     pj.razaoSocial = "Pessoa Juridica";
                     pj.nome = "Jequiti";
+                    float impostopj = pj.PagarImposto(5000);
 
+                    Console.WriteLine(impostopj);
                     Console.WriteLine(pj.CNPJ);
 
                         break;

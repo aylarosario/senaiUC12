@@ -13,6 +13,6 @@ namespace Sistema
 
         public bool enderecoComercial { get; set; }
 
-        public abstract void PagarImposto(float rendimento);
+        public abstract float PagarImposto(float rendimento);
     }
 }
