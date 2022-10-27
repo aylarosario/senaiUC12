@@ -67,7 +67,7 @@
                 switch (opcao)
                 {
                     case "1":
-                    PessoaFisica pf = new PessoaFisica();
+                    
                     /*
                         Endereco endPf = new Endereco();
                         Console.WriteLine("Digite seu logradouro");
@@ -93,13 +93,17 @@
 
                         PessoaFisica pf = new PessoaFisica();
                         pf.endereco = endPf;
-
-                        Console.WriteLine("Digite seu CPF (somente números)");
-                        pf.CPF = Console.ReadLine();
-
                         */
-                        Console.WriteLine("Digite seu nome");
-                        pf.nome = Console.ReadLine();
+                        PessoaFisica novaPf = new PessoaFisica();
+
+                        Console.WriteLine($"Digite seu CPF (somente números)");
+                        novaPf.CPF = Console.ReadLine();
+
+                        Console.WriteLine($"Digite seu nome");
+                        novaPf.nome = Console.ReadLine();
+
+                        Console.WriteLine($"Digite o valor do seu rendimento mensal");
+                        novaPf.salario = float.Parse(Console.ReadLine());
 
                         /*
                         Console.WriteLine("Digite o valor do seu salário");
@@ -107,34 +111,45 @@
 
                         Console.WriteLine("Digite a data do seu aniversário [AA/MM/DD]");
                         pf.dataNascimento = DateTime.Parse(Console.ReadLine());
-
-                        bool idadeValida = pf.ValidarDataNascimento(pf.dataNascimento);
-                        if(idadeValida == true){
-                            Console.WriteLine("Cadastro Aprovado");
-                            listaPf.Add(pf);
-                            Console.WriteLine(pf.PagarImposto(pf.salario));
-                        }
                         */
+                        bool idadeValida = novaPf.ValidarDataNascimento(novaPf.dataNascimento);
+                        if (idadeValida == true)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("*                Seu Cadastro Foi Aprovado                            *");
+                            listaPf.Add(novaPf);
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("* Seu Cadastro Foi Reprovado Por Motivos de Idade Minima Não Atingida *");
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                        }
 
-                       // StreamWriter sw = new StreamWriter($"{pf.nome}.txt");
-                       // sw.Write($"{pf.nome}");
-                       // sw.Close();
 
-                       using(StreamWriter sw = new StreamWriter($"{pf.nome}.txt")){
-                        sw.Write($"{pf.nome}");
+                        // StreamWriter sw = new StreamWriter($"{pf.nome}.txt");
+                        // sw.Write($"{pf.nome}");
+                        // sw.Close();
+
+                        using(StreamWriter sw = new StreamWriter($"{novaPf.nome}.txt")){
+                        sw.Write($"{novaPf.nome}");
+                        sw.WriteLine(novaPf.CPF);
+                        sw.WriteLine(novaPf.salario);
                        }
 
                         break;
 
                     case "2":
+                    //Listar pessoa física
                         //foreach(var cadaItem in listaPf){
                         //    Console.WriteLine($"{cadaItem.nome}, {cadaItem.CPF}");
                        // }
 
-                       Console.WriteLine("Digite o nome da pessoa que quer cultar");
+                       Console.WriteLine("Digite o nome da pessoa que quer ler o cadastro");
                        string pessoa = Console.ReadLine();
 
-                        using(StreamReader sr = new StreamReader($"pessoa.txt")){
+                        using(StreamReader sr = new StreamReader($"{pessoa}.txt")){
                             string linha;
                             while((linha = sr.ReadLine()) != null){
                                 Console.WriteLine($"{linha}");
@@ -146,7 +161,8 @@
                         break;
 
                     case "3":
-                        Console.WriteLine("Digite o CPF do querido que deseja remover");
+                    //Remover pessoa física
+                        Console.WriteLine("Digite o CPF do querido que deseja remover [somente números]");
                         string cpfProcurado = Console.ReadLine();
                         PessoaFisica pessoaEncontrada = listaPf.Find(cadaItem => cadaItem.CPF == cpfProcurado);
 
@@ -160,6 +176,7 @@
                         break;
 
                     case "4":
+                    //Cadastrar pessoa juridica
                         novaPj.nome = "Nome PJ";
                         novaPj.CNPJ = "00.000.000/0001-00";
                         novaPj.razaoSocial = "Razão Social PJ";
@@ -176,6 +193,7 @@
                         break;
 
                     case "5":
+                    //Listar pessoa juridica
                         List<PessoaJuridica> listaPj = metodoPj.Ler();
                         foreach(PessoaJuridica cadaItem in listaPj){
                             Console.Clear();
@@ -188,7 +206,7 @@
                         break;
 
                     case "6":
-
+                    //Remover pessoa jurídica
                         break;
 
                     case "0":
