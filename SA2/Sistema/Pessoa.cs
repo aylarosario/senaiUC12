@@ -14,5 +14,17 @@ namespace Sistema
         public bool enderecoComercial { get; set; }
 
         public abstract float PagarImposto(float rendimento);
+
+        public void verificarPastaArquivo(String caminho){
+            string pasta = caminho.Split("/")[0];
+
+            if(!Directory.Exists(pasta)){
+                Directory.CreateDirectory(pasta);
+            }
+
+            if(!File.Exists(caminho)){
+                using(File.Create(caminho)){}
+            }
+        }
     }
 }

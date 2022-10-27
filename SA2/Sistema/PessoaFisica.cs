@@ -7,6 +7,7 @@ namespace Sistema
 {
     public class PessoaFisica : Pessoa
     {
+        public float salario { get; set; }
         public string CPF { get; set; }
 
         public DateTime dataNascimento { get; set; }
