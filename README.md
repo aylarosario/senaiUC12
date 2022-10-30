@@ -1,5 +1,5 @@
 <h1 align="center">Cadastro de Clientes</h1>
-<h3 align="center">Sistema de cadastro de clientes pessoa física e jurídica.</h3>
+<h3 align="center">Sistema de cadastro de clientes: pessoa física e jurídica.</h3>
 
 ---
 <h4 align="left">Descrição</h4>
