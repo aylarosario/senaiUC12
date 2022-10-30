@@ -36,6 +36,7 @@
 
 <h4 align="left">:hammer_and_wrench: Execução de Aplicação</h4>
 ```bash
+
 * Clone este repositório
 $ git clone <https://github.com/aylarosario/senaiUC12/tree/main/SA2/Sistema>
 
